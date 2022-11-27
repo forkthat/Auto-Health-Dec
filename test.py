@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 WEBSITE = "https://docs.google.com/forms/d/e/1FAIpQLSfqTup4poG9EpgBrN3RYFOGPR6fDwjwT5TfMsDbEfdKPZRMDg/viewform"
-DRIVER_PATH = os.getcwd() + "//chromedriver"
+DRIVER_PATH = os.getcwd() + "//drivers//chromedriver"
 WAIT_TIME = 5
 WAIT_TIME_EACH_ITEM = 0.2
 
