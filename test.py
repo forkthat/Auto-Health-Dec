@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 WEBSITE = "https://docs.google.com/forms/d/e/1FAIpQLSfqTup4poG9EpgBrN3RYFOGPR6fDwjwT5TfMsDbEfdKPZRMDg/viewform"
-DRIVER_PATH = os.getcwd() + "//drivers//chromedriver"
+DRIVER_PATH = os.getcwd() + "//drivers//chromedriver.exe"
 WAIT_TIME = 5
 WAIT_TIME_EACH_ITEM = 0.2
 
@@ -16,12 +16,17 @@ driver = webdriver.Remote(service.service_url)
 driver.get(WEBSITE)
 time.sleep(WAIT_TIME)
 
+INPUT_EMAIL = "dsvignacio@gmail.com"
+INPUT_NAME = "Ignacio, Dennis Salvador Valeza"
+INPUT_LUGAR_NA_PINANGGALINGAN = "Area 2"
+INPUT_SAAN_NAGPUNTA_NAKARAANG_2_ARAW = "Area 2"
+INPUT_ILAN_CLOSE_CONTACT = "2"
 
 ########################################################
 #       Email
 ########################################################
 FIND_ELEMENT = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input')
-FIND_ELEMENT.send_keys("dsvignacio@gmail.com")
+FIND_ELEMENT.send_keys(INPUT_EMAIL)
 time.sleep(WAIT_TIME_EACH_ITEM)
 
 
@@ -29,7 +34,7 @@ time.sleep(WAIT_TIME_EACH_ITEM)
 #       Full name (Last, Given)
 ########################################################
 FIND_ELEMENT = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input')
-FIND_ELEMENT.send_keys("Ignacio, Dennis Salvador Valeza")
+FIND_ELEMENT.send_keys(INPUT_NAME)
 time.sleep(WAIT_TIME_EACH_ITEM)
 
 
@@ -45,7 +50,7 @@ time.sleep(WAIT_TIME_EACH_ITEM)
 #       Lugar na pinanggalingan (address)
 ########################################################
 FIND_ELEMENT = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/div[1]/div/div[1]/input')
-FIND_ELEMENT.send_keys("Area 2")
+FIND_ELEMENT.send_keys(INPUT_LUGAR_NA_PINANGGALINGAN)
 time.sleep(WAIT_TIME_EACH_ITEM)
 
 
@@ -99,7 +104,7 @@ time.sleep(WAIT_TIME_EACH_ITEM)
 #       Saan nagpunta nitong nakaraang dalawang araw?
 ########################################################
 FIND_ELEMENT = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[9]/div/div/div[2]/div/div[1]/div/div[1]/input')
-FIND_ELEMENT.send_keys("Area 2")
+FIND_ELEMENT.send_keys(INPUT_SAAN_NAGPUNTA_NAKARAANG_2_ARAW)
 time.sleep(WAIT_TIME_EACH_ITEM)
 
 
@@ -107,7 +112,7 @@ time.sleep(WAIT_TIME_EACH_ITEM)
 #       Ilan ang inyong naging close contact?
 ########################################################
 FIND_ELEMENT = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[10]/div/div/div[2]/div/div[1]/div/div[1]/input')
-FIND_ELEMENT.send_keys("2")
+FIND_ELEMENT.send_keys(INPUT_ILAN_CLOSE_CONTACT)
 time.sleep(WAIT_TIME_EACH_ITEM)
 
 
