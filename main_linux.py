@@ -18,9 +18,15 @@ time.sleep(WAIT_TIME)
 
 INPUT_EMAIL = "dsvignacio@gmail.com"
 INPUT_NAME = "Ignacio, Dennis Salvador Valeza"
+# Rason ng pagpunta sa Kalay :: dormer
 INPUT_LUGAR_NA_PINANGGALINGAN = "Area 2"
+# Status ng Bakuna konta COVID-19 :: meron lahat
+# Sintomas :: wala lahat
+# Paraan sa pagpunta sa Kalay :: naglakad
 INPUT_SAAN_NAGPUNTA_NAKARAANG_2_ARAW = "Area 2"
 INPUT_ILAN_CLOSE_CONTACT = "2"
+# May alam ka bang kaso ng Covid-19 sa iyong mga napuntahan? :: Wala
+# May alam ka bang kaso ng Covid-19 malapit sa inyong lugar? :: Wala
 
 ########################################################
 #       Email
